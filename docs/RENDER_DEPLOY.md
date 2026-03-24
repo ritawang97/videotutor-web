@@ -19,10 +19,11 @@ This project can be deployed to Render as a public FastAPI web service.
 
 ## Important notes
 
+- For the free Render plan, persistent disks are not available.
 - The app now stores writable runtime data under:
-  - `VIDEOTUTOR_APPDATA_PATH=/var/data/AppData`
-  - `VIDEOTUTOR_WORK_PATH=/var/data/work-dir`
-- These paths are mounted on the Render persistent disk defined in `render.yaml`.
+  - `VIDEOTUTOR_APPDATA_PATH=/tmp/AppData`
+  - `VIDEOTUTOR_WORK_PATH=/tmp/work-dir`
+- These paths are ephemeral and will be reset when the instance restarts or redeploys.
 - The health check endpoint is `GET /healthz`.
 
 ## Optional environment variables
