@@ -34,7 +34,9 @@ pip-wheel-metadata/
 program_output.log
 
 # Local runtime data
-AppData/
+AppData/*
+!AppData/pdf_vector_db/
+!AppData/pdf_vector_db/**
 work-dir/
 
 # Large third-party / model assets
