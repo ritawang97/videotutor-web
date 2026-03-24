@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: videotutor-web
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /healthz
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.9
+      - key: VIDEOTUTOR_APPDATA_PATH
+        value: /var/data/AppData
+      - key: VIDEOTUTOR_WORK_PATH
+        value: /var/data/work-dir
+    disk:
+      name: videotutor-data
+      mountPath: /var/data
+      sizeGB: 5

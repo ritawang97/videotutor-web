@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.coverage
+.coverage.*
+htmlcov/
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+sadtalker_env/
+
+# Build / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# IDE / OS files
+.DS_Store
+.idea/
+.vscode/
+
+# Logs
+*.log
+program_output.log
+
+# Local runtime data
+AppData/
+work-dir/
+
+# Large third-party / model assets
+SadTalker/
+resource/bin/
+
+# Local secrets / env
+.env
+.env.*
+
+# Temporary / cache databases
+*.sqlite
+*.sqlite3
+*.db

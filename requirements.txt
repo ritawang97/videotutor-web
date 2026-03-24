@@ -1,0 +1,21 @@
+﻿# Web (FastAPI) - Render-ready
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.0
+jinja2>=3.1.0
+
+# Core deps (existing pipeline)
+requests
+openai
+retry
+sqlalchemy
+json-repair
+PyPDF2
+PyMuPDF
+
+# Vector DB + local embedding
+chromadb>=0.4.0
+sentence-transformers>=2.2.0
+
+# Notes:
+# - Desktop GUI deps (PyQt5 / PyQt-Fluent-Widgets) are intentionally NOT required for web deployment.
+# - Video generation extras (yt_dlp / modelscope / pyttsx3 / pydub / psutil) can be installed separately if needed.
